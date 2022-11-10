@@ -4,14 +4,18 @@
   
   .navbar {
     background-color: var(--navBg);
+    color: floralwhite;
+    font-size: large;
     height: 80px;
     display: flex;
     justify-content: start;
     align-items: center;
+    margin-left: 0%;
   }
   
   .menu-bars {
     margin-left: 2rem;
+    margin-bottom: 66px;
     font-size: 2rem;
     background: none;
   }
@@ -74,5 +78,14 @@
   
   span {
     margin-left: 16px;
+  }
+  h2 {
+    margin-bottom: 66px;
+    margin-right: 100px;
+  }
+
+  .nav-link {
+    height: 50px;
+    margin-top: -20px
   }
   
