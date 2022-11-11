@@ -18,18 +18,12 @@ const Header = props => {
 };
 const HeaderWithRouter = withRouter(Header);
 
-
-const iot = () => <IoT/>;
-const meter = () => <Meter/>;
-
 export default function Buttons() {
   return (
     <div className="App">
       <Router>
         <Fragment>
           <HeaderWithRouter />
-          <Route path="/iot" exact component={iot} />
-          <Route path="/meter" exact component={meter} />
         </Fragment>
       </Router>
     </div>

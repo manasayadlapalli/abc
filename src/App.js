@@ -31,7 +31,7 @@ let currentPath = arr[arr.length-1];
                     <Route path="/iot" component={ IoT } />
                     <Route path="/meter" component={ Meter } />
 
-                <Footer />
+                {/* <Footer /> */}
             </div>
         </Router>
     )
