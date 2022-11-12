@@ -11,7 +11,6 @@ import ControlConfiguration from './components/pages/ControlConfiguration'
 import MonitorTracking from './components/pages/MonitorTracking'
 import IoT from './components/pages/IoT'
 import Meter from './components/pages/Meter'
-import Admin from './components/Admin/Admin'
 import BillingInfo from './components/pages/BillingInfo'
 import BillPayment from './components/pages/BillPayment'
 
@@ -33,10 +32,8 @@ let currentPath = arr[arr.length-1];
                     <Route path="/monitor-tracking" component={ MonitorTracking } />
                     <Route path="/iot" component={ IoT } />
                     <Route path="/meter" component={ Meter } />
-                    <Route path= "/admin" component={ Admin} />
                     <Route path="/billing-info" component={BillingInfo} /> 
                     <Route path="/bill-payment" component={BillPayment} />
-
                 {/* <Footer /> */}
             </div>
         </Router>
