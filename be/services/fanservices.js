@@ -41,6 +41,7 @@ class FanServices {
                     
                     const oldMeter = await ElectricMeter.remove(query);
 
+                    console.log(oldMeter)
                     return {oldMeter};
                                        
                 }
