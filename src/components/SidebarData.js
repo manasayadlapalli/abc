@@ -30,6 +30,12 @@ export const SidebarData = [
       cName: "nav-text"
     },
     {
+      title: "Billing-Information",
+      path: "/billing-info",
+      icon: <FaIcons.FaFileInvoiceDollar/>,
+      cName: "nav-text"
+    },
+    {
       title: "Logout",
       path: "/",
       icon: <IoIcons.IoMdPeople />,
