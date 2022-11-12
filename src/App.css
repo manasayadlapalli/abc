@@ -1,0 +1,11 @@
+.table-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  span {
+    padding: 10px;
+  }
+  *{
+    margin: 0 auto;
+}
+  
