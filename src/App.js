@@ -12,6 +12,7 @@ import MonitorTracking from './components/pages/MonitorTracking'
 import IoT from './components/pages/IoT'
 import Meter from './components/pages/Meter'
 import Admin from './components/Admin/Admin'
+import AdminHome from './components/Admin/AdminHome'
 
 export default function App() {
     let pathName = window.location.pathname
@@ -32,6 +33,7 @@ let currentPath = arr[arr.length-1];
                     <Route path="/iot" component={ IoT } />
                     <Route path="/meter" component={ Meter } />
                     <Route path= "/admin" component={ Admin} />
+                    <Route path ="/adminhome" component ={AdminHome}/>
 
                 {/* <Footer /> */}
             </div>
