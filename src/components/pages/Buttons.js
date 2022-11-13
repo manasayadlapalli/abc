@@ -1,7 +1,13 @@
 import React, { Fragment } from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import { withRouter } from "react-router";
+//import { withRouter } from "./withRouter";
+import {
+  useLocation,
+  useNavigate,
+  useParams
+} from "react-router-dom";
+
 import IoT from "./IoT";
 import Meter from "./Meter";
 
@@ -16,6 +22,24 @@ const Header = props => {
     </Navbar>
   );
 };
+
+const withRouter = (Component) => {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return (
+      <Component
+        {...props}
+        router={{ location, navigate, params }}
+      />
+    );
+  }
+
+  return ComponentWithRouterProp;
+
+}
+
 const HeaderWithRouter = withRouter(Header);
 
 export default function Buttons() {
@@ -23,7 +47,7 @@ export default function Buttons() {
     <div className="App">
       <Router>
         <Fragment>
-          <HeaderWithRouter />
+            <HeaderWithRouter />
         </Fragment>
       </Router>
     </div>

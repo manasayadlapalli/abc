@@ -23,20 +23,21 @@ let currentPath = arr[arr.length-1];
         <Router>
             {currentPath.length>0 &&<Navbar />}
             <div>
-            <Route exact path="/" component={ LandingPage } />
-                    <Route path="/login" component={ LoginPage } />
-                    <Route path="/register" component={ RegisterPage } />
-                    <Route path="/forget-password" component={ ForgetPasswordPage } />
-                    <Route path="/home" component={ HomePage } />
-                    <Route path="/device-mgmt" component={ DeviceManagement } />
-                    <Route path="/control-config" component={ ControlConfiguration } />
-                    <Route path="/monitor-tracking" component={ MonitorTracking } />
-                    <Route path="/iot" component={ IoT } />
-                    <Route path="/meter" component={ Meter } />
-                    <Route path= "/admin" component={ Admin} />
-                    <Route path="/billing-info" component={BillingInfo} /> 
-                    <Route path="/bill-payment" component={BillPayment} />
-
+            <Routes>
+                    <Route exact path="/" element={ <LandingPage/> } />
+                    <Route path="/login" element={<LoginPage/>  } />
+                    <Route path="/register" element={ <RegisterPage/> } />
+                    <Route path="/forget-password" element={<ForgetPasswordPage/>  } />
+                    <Route path="/home" element={<HomePage/>  } />
+                    <Route path="/device-mgmt" element={<DeviceManagement/>  } />
+                    <Route path="/control-config" element={<ControlConfiguration/>  } />
+                    <Route path="/monitor-tracking" element={<MonitorTracking/>  } />
+                    <Route path="/iot" element={<IoT/>  } />
+                    <Route path="/meter" element={<Meter/>  } />
+                    <Route path= "/admin" element={<Admin/> } />
+                    <Route path="/billing-info" element={<BillingInfo/>} /> 
+                    <Route path="/bill-payment" element={<BillPayment/>} />
+            </Routes>
                 {/* <Footer /> */}
             </div>
         </Router>
