@@ -118,3 +118,37 @@ button{
  .maps {
   margin-left: 4%;
  }
+ .adminbody {
+  margin: 0 10px ;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+ }
+
+ .sidebar {  
+  float: left;
+  width: 60px;
+  height: 100%;
+  margin: 0 10px ;
+  padding: 10px;
+  border-right: 2px solid #eee;
+ }
+
+ .guage {
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  width: 100%;
+  margin: 2% 2% 2% 0 ;
+  border: 1px solid rgba(212, 213, 192, 0.877);
+ } 
+ .sjsu{
+  float: left ;
+ } 
+ .logged-in {
+  color: green;
+}
+.map{
+  margin-top: 20px;
+
+}

@@ -1,9 +1,7 @@
 import React, { Fragment } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router} from "react-router-dom";
 import { withRouter } from "react-router";
-import IoT from "./IoT";
-import Meter from "./Meter";
 
 const Header = props => {
   const { location } = props;
