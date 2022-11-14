@@ -43,19 +43,21 @@ export const LoginPage = () => {
           }
           else{
             axios.post("http://localhost:3001/api/auth/login",{email: email, password: password}).then(async (res) => {
-            console.log("success", res);
             localStorage.setItem("email", JSON.stringify(email));
             if (res.status === 200) {
               if (res) {
+                
                 //localStorage.setItem("name", res?.data?.user?.foundUser?.name);
                 localStorage.setItem("email", res?.data?.user?.foundUser?.email);
                 if(email === "admin@gmail.com") navigate('/admin')
-                    else navigate('/airlines')
+                    else navigate('/home')
               }
             
             }
           }).catch((err) => {
             console.log(err)
+            setShowToast(true)
+            setToastText('Invalid email/password')
           });
           }
         
@@ -64,19 +66,19 @@ export const LoginPage = () => {
     return (
         <div className="text-center m-5-auto">
             <h2>Sign in to us</h2>
-            <form action="/home">
+            <form>
                 <p>
                     <label>Username or email address</label><br/>
-                    <input type="text" name="first_name" required />
+                    <input type="email" name="email" required onChange={(e) => { setEmail(e.target.value); }} />
                 </p>
                 <p>
                     <label>Password</label>
                     <Link to="/forget-password"><label className="right-label">Forget password?</label></Link>
                     <br/>
-                    <input type="password" name="password" required />
+                    <input type="password" name="password" required onChange={(e) => { setPassword(e.target.value); }}/>
                 </p>
                 <p>
-                    <button id="sub_btn" type="submit">Login</button>
+                    <button id="sub_btn" type="submit" onClick={login}>Login</button>
                 </p>
             </form>
             <MyToast show={showToast} handleClose={() => setShowToast(false)} text={toastText} />

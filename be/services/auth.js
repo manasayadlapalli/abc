@@ -12,10 +12,13 @@ class UserAuth {
                                 password : data.password,                             
                         }
                     let foundUser = await User.findOne({"email": query["email"] });
-                    if(await foundUser.password == data.password)
+                    if(foundUser && foundUser.password === data.password)
                     {
-                   
+                        
                     return {foundUser}
+                    }
+                    else{
+                        return null
                     }
                 }
                 catch(err){
