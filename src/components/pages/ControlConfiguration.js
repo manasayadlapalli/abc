@@ -8,6 +8,7 @@ import settings from '../../assets/images/settings-icon.png'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
 import ControlMeter from './ControlMeter'
+import ControlIOT from './ControlIOT'
 
 export const ControlConfiguration = () => {
   const [meter, setMeter] = useState('');
@@ -16,14 +17,14 @@ export const ControlConfiguration = () => {
     <div className="table-wrapper">
       <br></br>
       <div style={{display:'flex', justifyContent: "center"}}>
-      <button disabled={true} className='light-grey' style={{border:"1px solid rgba(0, 0, 0, 0.5)",fontSize:"15px" ,width:"100px", color: 'green'  }} onClick={(e) => setMeter('iot')}>
+      <button className='light-grey' style={{border:"1px solid rgba(0, 0, 0, 0.5)",fontSize:"15px" ,width:"100px", color: 'green'  }} onClick={(e) => setMeter('iot')}>
         IOT
       </button>
       <button className='light-grey' style={{border:"1px solid rgba(0, 0, 0, 0.5)",fontSize:"15px" ,width:"100px", color: 'green'  }} onClick={(e) => setMeter('meter')}>
         Meter
       </button>
       </div>
-      {meter === 'meter'?<ControlMeter/>:null}
+      {meter === 'meter'?<ControlMeter/>:<ControlIOT/>}
       
     </div>
   )
