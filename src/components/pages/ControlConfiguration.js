@@ -9,7 +9,7 @@ import Box from '@mui/material/Box'
 import { useState } from 'react'
 import ControlMeter from './ControlMeter'
 
-function ControlConfiguration() {
+export const ControlConfiguration = () => {
   const [meter, setMeter] = useState('');
   return (
     
@@ -29,4 +29,3 @@ function ControlConfiguration() {
   )
 }
 
-export default ControlConfiguration

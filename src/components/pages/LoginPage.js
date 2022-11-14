@@ -1,40 +1,55 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
-import CssBaseline from "@mui/material/CssBaseline";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
+// import Avatar from "@mui/material/Avatar";
+// import Button from "@mui/material/Button";
+// import CssBaseline from "@mui/material/CssBaseline";
+// import TextField from "@mui/material/TextField";
+// import FormControlLabel from "@mui/material/FormControlLabel";
+// import Checkbox from "@mui/material/Checkbox";
 import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+// import Grid from "@mui/material/Grid";
+// import Box from "@mui/material/Box";
+// import Typography from "@mui/material/Typography";
+// import Container from "@mui/material/Container";
+// import { createTheme, ThemeProvider } from "@mui/material/styles";
 import axios from "axios";
+import MyToast from '../MyToast'
 
-import '../../App.css'
+// import '../../App.css'
 
-export default function SignInPage() {
+export const LoginPage = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const navigate = useNavigate();
+    const [showToast, setShowToast] = useState(false)
+    const [toastText, setToastText] = useState('')
 
+    const validEmail = (email) => {
+        const regexEmail = /^\w+([\.-]?\w+)+@\w+([\.:]?\w+)+(\.[a-zA-Z0-9]{2,3})+$/
+    
+        return regexEmail.test(email)
+      }
 
     const login = (e) =>
     {
         e.preventDefault();
-        axios.post("http://localhost:3001/api/auth/login",{email: email, password: password}).
-        then(async (res) => {
+        if (!email || !password) {
+            setShowToast(true)
+            setToastText('Please enter both fields')
+          }
+          else if (!validEmail(email)) {
+            setShowToast(true)
+            setToastText('Please enter email correctly')
+          }
+          else{
+            axios.post("http://localhost:3001/api/auth/login",{email: email, password: password}).then(async (res) => {
             console.log("success", res);
             localStorage.setItem("email", JSON.stringify(email));
-            if (res.status == 200) {
+            if (res.status === 200) {
               if (res) {
-                console.log("srirM")
                 //localStorage.setItem("name", res?.data?.user?.foundUser?.name);
                 localStorage.setItem("email", res?.data?.user?.foundUser?.email);
-                if(email == "admin@gmail.com") navigate('/admin')
+                if(email === "admin@gmail.com") navigate('/admin')
                     else navigate('/airlines')
               }
             
@@ -42,6 +57,8 @@ export default function SignInPage() {
           }).catch((err) => {
             console.log(err)
           });
+          }
+        
     }
 
     return (
@@ -63,6 +80,8 @@ export default function SignInPage() {
                     <button id="sub_btn" type="submit" onClick={login}>Login</button>
                 </p>
             </form>
+            <MyToast show={showToast} handleClose={() => setShowToast(false)} text={toastText} />
+
             <footer>
                 <p><Link to="/">Back to Homepage</Link>.</p>
             </footer>

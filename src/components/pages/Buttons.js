@@ -42,7 +42,7 @@ const withRouter = (Component) => {
 
 const HeaderWithRouter = withRouter(Header);
 
-export default function Buttons() {
+export const Buttons=() => {
   return (
     <div className="App">
       <Router>

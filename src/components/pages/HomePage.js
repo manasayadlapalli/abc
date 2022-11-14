@@ -2,7 +2,7 @@ import React from 'react'
 import Table from 'react-bootstrap/Table';
 import '../../styles/Buttons.css'
 
-export default function HomePage() {
+export const HomePage = () => {
     return (
         <>
         <div className="text-left">

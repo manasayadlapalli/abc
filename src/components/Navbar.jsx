@@ -7,7 +7,7 @@ import { SidebarData } from "./SidebarData";
 import Buttons from "./pages/Buttons";
 import  "../styles/Navbar.css"
 
-export default  function Navbar() {
+export const Navbar = () => {
     const [sidebar, setSidebar] = useState(false);
     const showSidebar = () => setSidebar(!sidebar);
     return (
@@ -19,7 +19,7 @@ export default  function Navbar() {
                 <FaIcons.FaBars onClick={showSidebar} />
               </Link> &ensp; &ensp;
               <h2>Smart Meter Management </h2>
-              <Buttons />
+               {/* ??<Buttons />  */}
             </div>
             <nav className={sidebar ? "nav-menu active" : "nav-menu"}>
               <ul className="nav-menu-items" onClick={showSidebar}>

@@ -28,24 +28,22 @@ const SideBar = () => {
 };
 
 
-export default function Admin() {
+export const Admin = () => {
   return (
-    <BrowserRouter>
       <div style={{display: 'flex'}}>
         <div className='sidebar'>
           <SideBar />
         </div>
         <div className='adminbody'>        
-          <Routes>
+          {/* <Routes>
             <Route path="/addclients"> Admin adds clients here </Route>
             <Route path="/adminmetrics"> <Adminmetrics/></Route>
             <Route path="/adminhome">
               <AdminHome/>
             </Route>
-          </Routes>
+          </Routes> */}
           </div>
       </div>
-    </BrowserRouter>
   );
 }
 

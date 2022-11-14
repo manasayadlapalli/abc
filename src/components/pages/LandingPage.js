@@ -1,17 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 import '../../App.css'
 //import BackgroundImage from '../../assets/images/bg.png'
 
-export default function LandingPage() {
+export const LandingPage = () => {
+    const navigate = useNavigate();
+
+    const handleLoginpage = (event) => {
+        navigate("/login");
+      };
+
     return (
         <header style={ HeaderStyle }>
             <h1 className="main-title text-center">Green Energy Cloud</h1>
             <div className="buttons text-center">
-                <Link to="/login">
-                    <button className="primary-button">log in</button>
-                </Link>
+                    <button className="primary-button" onClick={handleLoginpage}>log in</button>
                 <Link to="/register">
                     <button className="primary-button" id="reg_btn"><span>register </span></button>
                 </Link>
