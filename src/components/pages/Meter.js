@@ -2,11 +2,11 @@ import React from 'react'
 import '../../styles/Buttons.css'
 import AddDevice from './AddDevice'
 import Table from 'react-bootstrap/Table';
-import "./App.css";
+//import "./App.css";
 import { useState } from "react";
 import Axios from "axios";
 
-function Meter() {
+export const Meter = () => {
   const [electricMeterId, setelectricMeterId] = useState("");
   const [electricMeterName, setelectricMeterName] = useState("");
   const [location, setlocation] = useState("");
@@ -181,4 +181,3 @@ function Meter() {
 }
 
 
-export default Meter

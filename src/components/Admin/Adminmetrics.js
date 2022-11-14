@@ -5,7 +5,7 @@ import Thermometer from 'react-thermometer-chart'
 import { Line } from 'rc-progress';
 import {IoBulbOutline} from 'react-icons/io5';
 
-export default function Adminmetrics() {
+export const Adminmetrics = () => {
   return (
     <div className='text-left'>
     <Dropdown>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function DeviceManagement() {
+export const DeviceManagement = () => {
     return(
         <>
         Device Management

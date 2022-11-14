@@ -10,7 +10,7 @@ import { useState } from 'react'
 import ControlMeter from './ControlMeter'
 import BillingCard from './BillingCard'
 
-function BillPayment() {
+export const BillPayment = () => {
   const [meter, setMeter] = useState('');
   return (
     
@@ -36,4 +36,3 @@ function BillPayment() {
   )
 }
 
-export default BillPayment

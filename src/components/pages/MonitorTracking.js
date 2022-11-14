@@ -102,7 +102,7 @@ const detailsWrap = {
 
 
 }
-const MonitorTracking = () => {
+export const MonitorTracking = () => {
   return (
 
     <>
@@ -144,4 +144,3 @@ const MonitorTracking = () => {
     </>
   );
 }
-export default MonitorTracking;

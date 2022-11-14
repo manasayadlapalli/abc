@@ -9,17 +9,17 @@ import Box from '@mui/material/Box'
 import { useState } from 'react'
 import ControlMeter from './ControlMeter'
 
-function ControlConfiguration() {
+export const ControlConfiguration = () => {
   const [meter, setMeter] = useState('');
   return (
     
     <div className="table-wrapper">
       <br></br>
       <div style={{display:'flex', justifyContent: "center"}}>
-      <button disabled={true} style={{fontSize:"15px" ,width:"100px", color:"green" }} onClick={(e) => setMeter('iot')}>
+      <button disabled={true} className='light-grey' style={{border:"1px solid rgba(0, 0, 0, 0.5)",fontSize:"15px" ,width:"100px", color: 'green'  }} onClick={(e) => setMeter('iot')}>
         IOT
       </button>
-      <button style={{fontSize:"15px" ,width:"100px", color: "green" }} onClick={(e) => setMeter('meter')}>
+      <button className='light-grey' style={{border:"1px solid rgba(0, 0, 0, 0.5)",fontSize:"15px" ,width:"100px", color: 'green'  }} onClick={(e) => setMeter('meter')}>
         Meter
       </button>
       </div>
@@ -29,4 +29,3 @@ function ControlConfiguration() {
   )
 }
 
-export default ControlConfiguration

@@ -11,7 +11,7 @@ import ControlMeter from './ControlMeter'
 import BillingTable from './BillingTable'
 import { Link } from 'react-router-dom'
 
-function BillingInfo() {
+export const BillingInfo = () => {
   const [meter, setMeter] = useState('');
   return (
     
@@ -54,4 +54,3 @@ function BillingInfo() {
   )
 }
 
-export default BillingInfo

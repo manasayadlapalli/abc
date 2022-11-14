@@ -1,6 +1,6 @@
 import React from 'react'
 
-function IoT() {
+export const IoT = () => {
   return (
     <div>
       IoT page
@@ -8,4 +8,3 @@ function IoT() {
   )
 }
 
-export default IoT
