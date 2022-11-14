@@ -1,3 +1,5 @@
+import React, { Component }  from 'react';
+
 import 'react-bootstrap';
 import Toast from 'react-bootstrap/Toast'
 import ToastContainer from 'react-bootstrap/ToastContainer'

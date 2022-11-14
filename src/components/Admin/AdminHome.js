@@ -2,7 +2,7 @@ import React from 'react'
 import Map from './Map'
 import SjsuMap from '../../assets/images/SjsuMap.png'
 
-function AdminHome() {
+export const AdminHome = () => {
 
    return (
     <div>
@@ -24,4 +24,3 @@ function AdminHome() {
     </div>
   )
 }
-export default AdminHome

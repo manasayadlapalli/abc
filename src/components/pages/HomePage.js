@@ -4,7 +4,7 @@ import { Chart } from "react-google-charts";
 
 import '../../styles/Buttons.css'
 
-export default function HomePage() {
+export const HomePage = () => {
     return (
         <>
         <div className="text-left">
@@ -55,8 +55,8 @@ export default function HomePage() {
                     chartType="Line"
                     width="90%"
                     height="300px"
-                    data={data}
-                    options={options}
+                    // data={data}
+                    // options={options}
                     />
                </div>
 

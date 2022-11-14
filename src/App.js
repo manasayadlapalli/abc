@@ -15,8 +15,9 @@ import {Meter} from './components/pages/Meter'
 import {Admin} from './components/Admin/Admin'
 import {BillingInfo} from './components/pages/BillingInfo'
 import {BillPayment} from './components/pages/BillPayment'
-import AdminHome from './components/Admin/AdminHome';
-import Adminmetrics from './components/Admin/Adminmetrics';
+import {AdminHome} from './components/Admin/AdminHome';
+import {Adminmetrics} from './components/Admin/Adminmetrics.js';
+
 
 function App() {
     let pathName = window.location.pathname
@@ -25,8 +26,7 @@ let currentPath = arr[arr.length-1];
     return (
         <>
             <div>
-            {/* {currentPath.length>0 &&<Navbar />} */}
-            <Navbar/>
+            {currentPath.length>0 &&<Navbar />}
             <Routes>
                     <Route exact path="/" element={<LandingPage/>} />
                     <Route path="login" element={<LoginPage/>} />
@@ -43,6 +43,7 @@ let currentPath = arr[arr.length-1];
                     <Route path="/bill-payment" element={<BillPayment/>} />
                     <Route path="/addclients" element={<AdminHome/>}/>
                     <Route path="/adminmetrics" element={<Adminmetrics/>}/>
+                    {/* <Route path="/adminhome" element={<Adminmetrics/>}/> */}
 
             </Routes>
                 {/* <Footer /> */}

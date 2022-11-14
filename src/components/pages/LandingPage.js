@@ -17,9 +17,9 @@ export const LandingPage = () => {
             <h1 className="main-title text-center">Green Energy Cloud</h1>
             <div className="buttons text-center">
                     <button className="primary-button" onClick={handleLoginpage}>log in</button>
-                <Link to="/register">
+                {/* <Link to="/register">
                     <button className="primary-button" id="reg_btn"><span>register </span></button>
-                </Link>
+                </Link> */}
             </div>
         </header>
     )

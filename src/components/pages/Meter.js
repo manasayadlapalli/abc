@@ -2,7 +2,7 @@ import React from 'react'
 import '../../styles/Buttons.css'
 import AddDevice from './AddDevice'
 import Table from 'react-bootstrap/Table';
-import "./App.css";
+//import "./App.css";
 import { useState } from "react";
 import Axios from "axios";
 
