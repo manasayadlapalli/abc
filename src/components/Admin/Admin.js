@@ -4,9 +4,10 @@ import {AiFillHome} from 'react-icons/ai'
 import {GrUserSettings} from 'react-icons/gr'
 import {GoGraph} from 'react-icons/go'
 import {FaSignOutAlt} from 'react-icons/fa'
-import { BrowserRouter, Routes , Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Adminmetrics from './Adminmetrics'
 import AdminHome from './AdminHome'
+import UserTable from './UserTable'
 
 const SideBar = () => {
   return (
@@ -21,7 +22,7 @@ const SideBar = () => {
         <Link to="/addclients"> <GrUserSettings style={{ fontSize: '31px' }}/> </Link>
       </div>
       <div> <br/>
-        <Link to= {"/"}> <FaSignOutAlt style={{ fontSize: '31px' }}/> </Link>
+        <Link to= "/"> <FaSignOutAlt style={{ fontSize: '31px' }}/> </Link>
       </div>
     </>
   );

@@ -1,8 +1,10 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
+import { Chart } from "react-google-charts";
+
 import '../../styles/Buttons.css'
 
-export const HomePage = () => {
+export default function HomePage() {
     return (
         <>
         <div className="text-left">
@@ -47,7 +49,17 @@ export const HomePage = () => {
                     <th></th>
                 </tr>
                 </thead>
-               </Table> 
+               </Table>  <br/>
+               <div>
+                <Chart
+                    chartType="Line"
+                    width="90%"
+                    height="300px"
+                    data={data}
+                    options={options}
+                    />
+               </div>
+
        
         </div>
         </>
