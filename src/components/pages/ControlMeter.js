@@ -40,7 +40,7 @@ function ControlMeter() {
             <th></th>
           </tr>
           <tr>
-            <th><img width="30" src={meter ==='Electricity'? energy : water}/> {meter=='Electricity'? 'EMETE':'WMETE'}001</th>
+            <th><img width="30" src={meter ==='Electricity'? energy : water}/> {meter==='Electricity'? 'EMETE':'WMETE'}001</th>
             <th>{meter} Meter 1</th>
             <th><ToggleSwitch/></th>
             <th><ToggleSwitch/></th>
@@ -48,7 +48,7 @@ function ControlMeter() {
             <th> <img width="30" src={settings} onClick={(s) => setSetting('setting')}/></th>
           </tr>
           <tr>
-            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter=='Electricity'? 'EMETE':'WMETE'}002</th>
+            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter==='Electricity'? 'EMETE':'WMETE'}002</th>
             <th>{meter} Meter 2</th>
             <th><ToggleSwitch/></th>
             <th><ToggleSwitch/></th>
@@ -56,7 +56,7 @@ function ControlMeter() {
             <th><img width="30" src={settings} onClick={(s) => setSetting('setting')}/></th>
           </tr>
           <tr>
-            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter=='Electricity'? 'EMETE':'WMETE'}003</th>
+            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter==='Electricity'? 'EMETE':'WMETE'}003</th>
             <th>{meter} Meter 3</th>
             <th><ToggleSwitch/></th>
             <th><ToggleSwitch/></th>
@@ -64,7 +64,7 @@ function ControlMeter() {
             <th><img width="30" src={settings} onClick={(s) => setSetting('setting')}/></th>
           </tr>
           <tr>
-            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter=='Electricity'? 'EMETE':'WMETE'}004</th>
+            <th><img width="30" src={meter ==='Electricity'? energy : water}/>{meter==='Electricity'? 'EMETE':'WMETE'}004</th>
             <th>{meter} Meter 4</th>
             <th><ToggleSwitch/></th>
             <th><ToggleSwitch/></th>

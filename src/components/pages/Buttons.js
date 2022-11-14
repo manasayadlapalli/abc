@@ -1,9 +1,12 @@
 import React, { Fragment } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { withRouter } from "react-router";
-import IoT from "./IoT";
-import Meter from "./Meter";
+import { BrowserRouter as Router} from "react-router-dom";
+import {
+  useLocation,
+  useNavigate,
+  useParams
+} from "react-router-dom";
+
 
 const Header = props => {
   const { location } = props;
@@ -16,9 +19,28 @@ const Header = props => {
     </Navbar>
   );
 };
+
+const withRouter = (Component) => {
+  function ComponentWithRouterProp(props) {
+    let location = useLocation();
+    let navigate = useNavigate();
+    let params = useParams();
+    return (
+      <Component
+        {...props}
+        router={{ location, navigate, params }}
+      />
+    );
+  }
+
+  return ComponentWithRouterProp;
+
+}
+
+
 const HeaderWithRouter = withRouter(Header);
 
-export default function Buttons() {
+export const Buttons=() => {
   return (
     <div className="App">
       <Router>
