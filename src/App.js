@@ -17,7 +17,7 @@ import {BillingInfo} from './components/pages/BillingInfo'
 import {BillPayment} from './components/pages/BillPayment'
 import {AdminHome} from './components/Admin/AdminHome';
 import {Adminmetrics} from './components/Admin/Adminmetrics.js';
-
+import New_Login from './components/pages/New_Login';
 
 function App() {
     let pathName = window.location.pathname
@@ -30,6 +30,7 @@ let currentPath = arr[arr.length-1];
             <Routes>
                     <Route exact path="/" element={<LandingPage/>} />
                     <Route path="login" element={<LoginPage/>} />
+                    <Route path="new-login" element={<New_Login/>} />
                     <Route path="/register" element={<RegisterPage/>} />
                     <Route path="/forget-password" element={<ForgetPasswordPage/>} />
                     <Route path="/home" element={<HomePage/>}/>
