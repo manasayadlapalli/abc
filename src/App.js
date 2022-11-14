@@ -5,7 +5,7 @@ import {LandingPage} from './components/pages/LandingPage'
 import {LoginPage} from './components/pages/LoginPage'
 import {RegisterPage} from './components/pages/RegisterPage'
 import {ForgetPasswordPage} from './components/pages/ForgetPasswordPage'
-import {HomePage} from './components/pages/HomePage'
+import HomePage from './components/pages/HomePage'
 import {Navbar} from './components/Navbar'
 import {DeviceManagement} from './components/pages/DeviceManagement'
 import {ControlConfiguration} from './components/pages/ControlConfiguration'
@@ -56,20 +56,20 @@ let currentPath = arr[arr.length-1];
 
 export default App;
 
-const Footer = () => {
-    return (
-        <p className="text-center" style={ FooterStyle }>Footer</p>
-    )
-}
+// const Footer = () => {
+//     return (
+//         <p className="text-center" style={ FooterStyle }>Footer</p>
+//     )
+// }
 
-const FooterStyle = {
-    background: "#222",
-    fontSize: ".8rem",
-    color: "#fff",
-    position: "absolute",
-    bottom: 0,
-    padding: "1rem",
-    margin: 0,
-    width: "100%",
-    opacity: ".5"
-}
+// const FooterStyle = {
+//     background: "#222",
+//     fontSize: ".8rem",
+//     color: "#fff",
+//     position: "absolute",
+//     bottom: 0,
+//     padding: "1rem",
+//     margin: 0,
+//     width: "100%",
+//     opacity: ".5"
+// }
