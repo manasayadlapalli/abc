@@ -14,7 +14,6 @@ import Meter from './components/pages/Meter'
 import Admin from './components/Admin/Admin'
 import BillingInfo from './components/pages/BillingInfo'
 import BillPayment from './components/pages/BillPayment'
-import UserTable from "./components/Admin/UserTable"
 
 export default function App() {
     let pathName = window.location.pathname
@@ -35,10 +34,9 @@ let currentPath = arr[arr.length-1];
                     <Route path="/iot" component={ IoT } />
                     <Route path="/meter" component={ Meter } />
                     <Route path= "/admin" component={ Admin} />
-                    <Route path= "/addclients" component={UserTable} />
                     <Route path="/billing-info" component={BillingInfo} /> 
                     <Route path="/bill-payment" component={BillPayment} />
-
+                    
 
                 {/* <Footer /> */}
             </div>
