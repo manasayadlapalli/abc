@@ -7,6 +7,7 @@ import {FaSignOutAlt} from 'react-icons/fa'
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Adminmetrics from './Adminmetrics'
 import AdminHome from './AdminHome'
+import UserTable from './UserTable'
 
 const SideBar = () => {
   return (
@@ -21,7 +22,7 @@ const SideBar = () => {
         <Link to="/addclients"> <GrUserSettings style={{ fontSize: '31px' }}/> </Link>
       </div>
       <div> <br/>
-        <Link to= {"/"}> <FaSignOutAlt style={{ fontSize: '31px' }}/> </Link>
+        <Link to= "/"> <FaSignOutAlt style={{ fontSize: '31px' }}/> </Link>
       </div>
     </>
   );
@@ -37,7 +38,7 @@ export default function Admin() {
         </div>
         <div className='adminbody'>        
           <Switch>
-            <Route path="/addclients"> Admin adds clients here </Route>
+            <Route path="/addclients"> <UserTable/> </Route>
             <Route path="/adminmetrics"> <Adminmetrics/></Route>
             <Route path="/adminhome">
               <AdminHome/>
