@@ -23,13 +23,18 @@ function App() {
     let pathName = window.location.pathname
 let arr = pathName.toString().split("/");
 let currentPath = arr[arr.length-1];
+let AdminNavFlag = false
+if(currentPath.includes("admin") || currentPath.includes("Admin")) {
+    AdminNavFlag = true
+}
     return (
         <>
             <div>
             {currentPath.length>0 &&<Navbar />}
             <Routes>
                     <Route exact path="/" element={<LandingPage/>} />
-                    <Route path="login" element={<LoginPage/>} />
+                    {/* <Route path="login" element={<LoginPage/>} /> */}
+                    <Route path="login" element={<New_Login/>} />
                     <Route path="new-login" element={<New_Login/>} />
                     <Route path="/register" element={<RegisterPage/>} />
                     <Route path="/forget-password" element={<ForgetPasswordPage/>} />
@@ -44,7 +49,8 @@ let currentPath = arr[arr.length-1];
                     <Route path="/bill-payment" element={<BillPayment/>} />
                     <Route path="/addclients" element={<AdminHome/>}/>
                     <Route path="/adminmetrics" element={<Adminmetrics/>}/>
-                    {/* <Route path="/adminhome" element={<Adminmetrics/>}/> */}
+                    <Route path="/adminhome" element={<AdminHome/>}/>
+                    {/* <Route path="/adminhome" el ment={<Adminmetrics/>}/> */}
 
             </Routes>
                 {/* <Footer /> */}

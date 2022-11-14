@@ -14,7 +14,8 @@ export const ForgetPasswordPage = () => {
                     <input type="email" name="email" required />
                 </p>
                 <p>
-                    <button id="sub_btn" type="submit">Send password reset email</button>
+                    <button id="sub_btn" type="submit" style={{width : "200px", height : "70 px",  borderRadius:'8px'}}>
+                        Reset Password</button>
                 </p>
             </form>
             <footer>
