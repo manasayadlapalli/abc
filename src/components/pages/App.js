@@ -13,6 +13,7 @@ import IoT from './components/pages/IoT'
 import Meter from './components/pages/Meter'
 import BillingInfo from './components/pages/BillingInfo'
 import BillPayment from './components/pages/BillPayment'
+import BillingConfirmation from './components/pages/BillingConfirmation'
 
 export default function App() {
     let pathName = window.location.pathname
@@ -34,6 +35,7 @@ let currentPath = arr[arr.length-1];
                     <Route path="/meter" component={ Meter } />
                     <Route path="/billing-info" component={BillingInfo} /> 
                     <Route path="/bill-payment" component={BillPayment} />
+                    <Route path="/bill-confirmation" component={BillingConfirmation} />
                 {/* <Footer /> */}
             </div>
         </Router>

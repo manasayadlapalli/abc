@@ -10,6 +10,7 @@ import { useState } from 'react'
 import ControlMeter from './ControlMeter'
 import BillingTable from './BillingTable'
 import { Link } from 'react-router-dom'
+import { red } from '@mui/material/colors'
 
 function BillingInfo() {
   const [meter, setMeter] = useState('');
@@ -17,38 +18,23 @@ function BillingInfo() {
     
     <div className="table-wrapper" >
       <br></br>
-      <h2>Billing Information</h2>
-      <div style={{ display: "flex" }}>
-        <h4>Device List</h4>
-      </div>
+      
+      <h1 style={{ justifyContent:'center', alignItems:'center', color: 'white', backgroundColor: 'green', width: 800 }}>Billing Information</h1>
 
       <BillingTable></BillingTable>
-      
 
       <br></br>
-      
       
       <Link to="/bill-payment">
       <div style={{ display: "flex" }}>
           <button
               style={{ marginLeft: "auto", backgroundColor:'green' , fontSize: '18px', 
-              width:'120px', color: 'black', borderRadius:'5px'}}
+              width:'120px', color: 'white', borderRadius:'5px'}}
             >
               Next
             </button>
             </div>
         </Link>
-       
-      
-      {/* <div style={{display:'flex', justifyContent: "center"}}>
-      <button disabled={true} style={{fontSize:"15px" ,width:"100px", color:"green" }} onClick={(e) => setMeter('iot')}>
-        IOT
-      </button>
-      <button style={{fontSize:"15px" ,width:"100px", color: "green" }} onClick={(e) => setMeter('meter')}>
-        Meter
-      </button>
-      </div>
-      {meter === 'meter'?<ControlMeter/>:null} */}
       
     </div>
   )

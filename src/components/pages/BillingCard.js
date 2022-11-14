@@ -1,6 +1,6 @@
 import React from "react";
 import Card from "react-credit-cards";
-import SupportedCards from "./SupportedCards";
+import { Link } from 'react-router-dom'
 
 import Button from "../../styles/CardStyles.css";
 import {
@@ -11,6 +11,7 @@ import {
 } from "./utils";
 
 import "react-credit-cards/es/styles-compiled.css";
+import SupportedCards from "./SupportedCards";
 
 export default class BillingCard extends React.Component {
   state = {
@@ -128,20 +129,15 @@ export default class BillingCard extends React.Component {
             </div>
             <input type="hidden" name="issuer" value={issuer} />
             <div className="form-actions">
-              <button className="btn btn-primary btn-block">PAY</button>
+            <Link to="/bill-confirmation"> 
+            <button className="btn btn-primary btn-block">PAY</button>
+            </Link>
+              
             </div>
           </form>
-          {formData && (
-            // <div className="App-highlight">
-            //   {formatFormData(formData).map((d, i) => (
-            //     <div key={i}>{d}</div>
-            //   ))}
-            // </div>
-            <div>
-            <h3>Paid Successfully</h3>
-                </div>
-          )}
-          
+
+          <br></br>
+            <SupportedCards></SupportedCards>
         </div>
         
       </div>

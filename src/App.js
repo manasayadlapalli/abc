@@ -14,6 +14,7 @@ import Meter from './components/pages/Meter'
 import Admin from './components/Admin/Admin'
 import BillingInfo from './components/pages/BillingInfo'
 import BillPayment from './components/pages/BillPayment'
+import BillingConfirmation from './components/pages/BillingConfirmation'
 
 export default function App() {
     let pathName = window.location.pathname
@@ -36,6 +37,7 @@ let currentPath = arr[arr.length-1];
                     <Route path= "/admin" component={ Admin} />
                     <Route path="/billing-info" component={BillingInfo} /> 
                     <Route path="/bill-payment" component={BillPayment} />
+                    <Route path="/bill-confirmation" component={BillingConfirmation} />
 
                 {/* <Footer /> */}
             </div>

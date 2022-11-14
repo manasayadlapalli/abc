@@ -8,18 +8,24 @@ import settings from '../../assets/images/settings-icon.png'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
 import ControlMeter from './ControlMeter'
-import BillingCard from './BillingCard'
+import { red } from '@mui/material/colors'
+import {
+    SentimentVerySatisfied,
+    SentimentVeryDissatisfied
+ } from '@material-ui/icons';
 
-function BillPayment() {
+function BillingConfirmation() {
   const [meter, setMeter] = useState('');
   return (
     
     <div className="table-wrapper" >
       <br></br>
-      <h1 style={{ justifyContent:'center', alignItems:'center', color: 'white', backgroundColor: 'green', width: 800 }}>Bill Payment</h1>
-      <BillingCard ></BillingCard>
+      <h2 style={{ justifyContent:'center', alignItems:'center', color: 'green' }} ><SentimentVerySatisfied fontSize="large" color="primary"/>Thankyou for your Payment!</h2>
+
+      <br></br>
+      
     </div>
   )
 }
 
-export default BillPayment
+export default BillingConfirmation
