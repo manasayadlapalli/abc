@@ -43,7 +43,6 @@ export const LoginPage = () => {
           }
           else{
             axios.post("http://localhost:3001/api/auth/login",{email: email, password: password}).then(async (res) => {
-            console.log("success", res);
             localStorage.setItem("email", JSON.stringify(email));
             if (res.status === 200) {
               if (res) {
@@ -57,6 +56,8 @@ export const LoginPage = () => {
             }
           }).catch((err) => {
             console.log(err)
+            setShowToast(true)
+            setToastText('Invalid email/password')
           });
           }
         

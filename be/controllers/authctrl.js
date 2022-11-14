@@ -11,7 +11,7 @@ router.post('/login', async (req, res) => {
   const response = {};
   try {
     const result = await UserAuth.loginUser(data);
-
+    console.log(result)
     if (result) {
       response.success = true;
       response.user = result;
