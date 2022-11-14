@@ -4,7 +4,7 @@ import {AiFillHome} from 'react-icons/ai'
 import {GrUserSettings} from 'react-icons/gr'
 import {GoGraph} from 'react-icons/go'
 import {FaSignOutAlt} from 'react-icons/fa'
-import { BrowserRouter, Routes , Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Adminmetrics from './Adminmetrics'
 import AdminHome from './AdminHome'
 
@@ -36,13 +36,13 @@ export default function Admin() {
           <SideBar />
         </div>
         <div className='adminbody'>        
-          <Routes>
+          <Switch>
             <Route path="/addclients"> Admin adds clients here </Route>
             <Route path="/adminmetrics"> <Adminmetrics/></Route>
             <Route path="/adminhome">
               <AdminHome/>
             </Route>
-          </Routes>
+          </Switch>
           </div>
       </div>
     </BrowserRouter>
