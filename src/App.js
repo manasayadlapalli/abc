@@ -5,7 +5,7 @@ import {LandingPage} from './components/pages/LandingPage'
 import {LoginPage} from './components/pages/LoginPage'
 import {RegisterPage} from './components/pages/RegisterPage'
 import {ForgetPasswordPage} from './components/pages/ForgetPasswordPage'
-import {HomePage} from './components/pages'
+import HomePage from './components/pages/HomePage'
 import {Navbar} from './components/Navbar'
 import {DeviceManagement} from './components/pages/DeviceManagement'
 import {ControlConfiguration} from './components/pages/ControlConfiguration'
@@ -18,6 +18,7 @@ import {BillPayment} from './components/pages/BillPayment'
 import {AdminHome} from './components/Admin/AdminHome';
 import {Adminmetrics} from './components/Admin/Adminmetrics.js';
 import New_Login from './components/pages/New_Login';
+import UserTable from './components/Admin/UserTable';
 
 function App() {
     let pathName = window.location.pathname
@@ -42,9 +43,9 @@ let currentPath = arr[arr.length-1];
                     <Route path= "/admin" element={<Admin/> } />
                     <Route path="/billing-info" element={<BillingInfo/>} /> 
                     <Route path="/bill-payment" element={<BillPayment/>} />
-                    <Route path="/addclients" element={<AdminHome/>}/>
+                    <Route path="/addclients" element={<UserTable/>}/>
                     <Route path="/adminmetrics" element={<Adminmetrics/>}/>
-                    {/* <Route path="/adminhome" element={<Adminmetrics/>}/> */}
+                    <Route path="/adminhome" element={<AdminHome/>}/> 
 
             </Routes>
                 {/* <Footer /> */}

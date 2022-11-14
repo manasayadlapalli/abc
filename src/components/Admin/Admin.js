@@ -4,10 +4,9 @@ import {AiFillHome} from 'react-icons/ai'
 import {GrUserSettings} from 'react-icons/gr'
 import {GoGraph} from 'react-icons/go'
 import {FaSignOutAlt} from 'react-icons/fa'
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Adminmetrics from './Adminmetrics'
-import AdminHome from './AdminHome'
-import UserTable from './UserTable'
+import { BrowserRouter, Router, Route, Link } from "react-router-dom";
+import {Adminmetrics} from './Adminmetrics'
+import {AdminHome} from './AdminHome'
 
 const SideBar = () => {
   return (
@@ -36,13 +35,11 @@ export const Admin = () => {
           <SideBar />
         </div>
         <div className='adminbody'>        
-          {/* <Routes>
+          <Router>
             <Route path="/addclients"> Admin adds clients here </Route>
-            <Route path="/adminmetrics"> <Adminmetrics/></Route>
-            <Route path="/adminhome">
-              <AdminHome/>
-            </Route>
-          </Routes> */}
+            <Route path="/adminmetrics-payment" element={<Adminmetrics/>} />
+            <Route path="/adminhome" element ={<AdminHome/>}/>
+          </Router>
           </div>
       </div>
   );
