@@ -6,54 +6,54 @@ import energy from '../../assets/images/meter.jpg'
 const parameters = ["Work Status:", "ELectricity Capacity:", "Voltage:", "Current:", "Today Usage", "Last 24 hr Usage:", "This Week's Usage:", "This month's Usage:", "This Year's Usage:"]
 
 const meterDetails = [
-    {
-        "name": "Electricity Meter 1",
-        "path": energy,
-        "work_Status": "Working",
-        "electricity_capacity": "70%",
-        "Voltage": "200V",
-        "Current": "10A",
-        "Today_Usage": "60KWh",
-        "Last_24_hr": "70KWh",
-        "weekUsage": "470 KWh",
-        "monthUsage": "2100 KWh",
-        "yearUsage": "21200 KWh"
+  {
+    "name": "Electricity Meter 1",
+    "path": energy,
+    "work_Status": "Working",
+    "electricity_capacity": "70%",
+    "Voltage": "200V",
+    "Current": "10A",
+    "Today_Usage": "60KWh",
+    "Last_24_hr": "70KWh",
+    "weekUsage": "470 KWh",
+    "monthUsage": "2100 KWh",
+    "yearUsage": "21200 KWh"
 
-    },
-    {
-        "name": "Electricity Meter 2 ",
-        "path": energy,
-        "work_Status": "Working",
-        "electricity_capacity": "60%",
-        "Voltage": "200V",
-        "Current": "10A",
-        "Today_Usage": "65KWh",
-        "Last_24_hr": "75KWh",
-        "weekUsage": "490 KWh",
-        "monthUsage": "2400 KWh",
-        "yearUsage": "25200 KWh"
+  },
+  {
+    "name": "Electricity Meter 2 ",
+    "path": energy,
+    "work_Status": "Working",
+    "electricity_capacity": "60%",
+    "Voltage": "200V",
+    "Current": "10A",
+    "Today_Usage": "65KWh",
+    "Last_24_hr": "75KWh",
+    "weekUsage": "490 KWh",
+    "monthUsage": "2400 KWh",
+    "yearUsage": "25200 KWh"
 
-    },
-    {
-        "name": "Electricity Meter 3",
-        "path": energy,
-        "work_Status": "Working",
-        "electricity_capacity": "40%",
-        "Voltage": "100V",
-        "Current": "5A",
-        "Today_Usage": "62KWh",
-        "Last_24_hr": "72KWh",
-        "weekUsage": "470 KWh",
-        "monthUsage": "2100 KWh",
-        "yearUsage": "21200 KWh"
+  },
+  {
+    "name": "Electricity Meter 3",
+    "path": energy,
+    "work_Status": "Working",
+    "electricity_capacity": "40%",
+    "Voltage": "100V",
+    "Current": "5A",
+    "Today_Usage": "62KWh",
+    "Last_24_hr": "72KWh",
+    "weekUsage": "470 KWh",
+    "monthUsage": "2100 KWh",
+    "yearUsage": "21200 KWh"
 
-    },
-    {
-        "name": "Electricity Meter 1",
-        "path": energy,
-        "work_Status": "Failing"
+  },
+  {
+    "name": "Electricity Meter 4",
+    "path": energy,
+    "work_Status": "Failing"
 
-    },
+  },
 ]
 
 
@@ -88,60 +88,59 @@ export const options = {
 };
 
 const meterStyle = {
-    display: ""
+  display: ""
 }
 const meterListStyle = {
-    display: "inline-grid",
-    textAlign: "center"
+  display: "inline-grid",
+  textAlign: "center"
 }
 const detailsWrap = {
-    display: "inline-flex",
-    marginLeft: "22em",
-    alignItems: "end"
-
-
-
+  display: "inline-flex"
 }
+const para = {
+  marginTop: '8em'
+}
+
 export const MonitorTracking = () => {
   return (
 
     <>
-    <div className="details-wrapper" style={detailsWrap}>
-    <div className="parameter">
-        <ol>
-        {parameters.map((data) => (
-            <li>{data}</li>
-        ))}
-                
-        </ol>
-    </div>
-    <div className="meter-details-1">
-         <ol style={meterStyle}>
-      {meterDetails.map((data) => (
-        <li style={meterListStyle}> 
-          <span style={{ background: 'lightgray', boxShadow: "5px 5px #888888"}} >{data.name}</span>
-          <img style={{marginTop: "16px"}} width= "60" src={data.path} alt="alt" />
-        <span style={data.work_Status==="Working"?{ color: 'green'}:{ color: 'red'}} >{data.work_Status}</span>
-          <span>{data.Voltage}</span>
-          <span>{data.Current}</span>
-          <span>{data.Today_Usage}</span>
-          <span>{data.Last_24_hr}</span>
-          <span>{data.weekUsage}</span>
-          <span>{data.monthUsage}</span>
-          <span>{data.yearUsage}</span>
-        </li>
-      ))}
-    </ol>    
-    </div>
-    </div>
-    <Chart
-      chartType="Line"
-      width="80%"
-      height="300px"
-      style={{position: 'relative', left: '12em'}}
-      data={data}
-      options={options}
-    />
+      <div className="details-wrapper" style={detailsWrap}>
+        <div className="parameter" style={para}>
+          <ol>
+            {parameters.map((data) => (
+              <li>{data}</li>
+            ))}
+
+          </ol>
+        </div>
+        <div className="meter-details-1">
+          <ol style={meterStyle}>
+            {meterDetails.map((data) => (
+              <li style={meterListStyle}>
+                <span style={{ background: 'lightgray', boxShadow: "5px 5px #888888" }} >{data.name}</span>
+                <img style={{ marginTop: "16px", marginLeft: "60px" }} width="60" src={data.path} alt="alt" />
+                <span style={data.work_Status === "Working" ? { color: 'green' } : { color: 'red' }} >{data.work_Status}</span>
+                <span>{data.Voltage}</span>
+                <span>{data.Current}</span>
+                <span>{data.Today_Usage}</span>
+                <span>{data.Last_24_hr}</span>
+                <span>{data.weekUsage}</span>
+                <span>{data.monthUsage}</span>
+                <span>{data.yearUsage}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+      <Chart
+        chartType="Line"
+        width="78em"
+        height="300px"
+        style={{ position: 'relative', left: '10' }}
+        data={data}
+        options={options}
+      />
     </>
   );
 }

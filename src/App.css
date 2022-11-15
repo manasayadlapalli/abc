@@ -1,5 +1,5 @@
 .table-wrapper {
-    max-width: 800px;
+  width: fit-content;
     margin: 0 auto;
   }
   span {
