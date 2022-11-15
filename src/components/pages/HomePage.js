@@ -37,7 +37,7 @@ export default function HomePage() {
 
     return (
         <>
-        <div className="text-left">
+        <div className="text-left" style={{width: '80%', marginLeft: '17em'}} >
             <h5>Today's Usuage</h5>
             <Table table borderless>
                 <thead>
@@ -85,6 +85,7 @@ export default function HomePage() {
                     chartType="Line"
                     width="80%"
                     height="300px"
+                    style={{position: 'relative', left: '12em'}}
                     data={data}
                     options={options}
                     />

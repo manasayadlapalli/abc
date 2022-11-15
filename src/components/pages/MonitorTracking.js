@@ -138,6 +138,7 @@ export const MonitorTracking = () => {
       chartType="Line"
       width="80%"
       height="300px"
+      style={{position: 'relative', left: '12em'}}
       data={data}
       options={options}
     />
