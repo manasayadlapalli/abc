@@ -57,14 +57,14 @@ class FanServices {
                     const query = { 
                         _id: id
                     };
-                    
-                    const updatedMeter = await ElectricMeter.findOneAndUpdate(query,data);
+                    console.log(query._id);
+                    const updatedMeter = await ElectricMeter.findOneAndUpdate(query._id,data);
+                    console.log(updatedMeter);
 
                     if(updatedMeter)
                     {
                         return { updatedMeter }
-                    }
-                                       
+                    }                                       
                 }
                 catch(err){
                         console.log(err);
