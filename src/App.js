@@ -17,6 +17,8 @@ import { BillingInfo } from './components/pages/BillingInfo'
 import { BillPayment } from './components/pages/BillPayment'
 import { AdminHome } from './components/Admin/AdminHome';
 import { Adminmetrics } from './components/Admin/Adminmetrics.js';
+import {SideBar} from './components/Admin/Admin.js'
+import UserTable from './components/Admin/UserTable';
 
 
 function App() {
@@ -36,13 +38,12 @@ function App() {
                     <Route path="/monitor-tracking" element={<><Navbar/><MonitorTracking/> </> } />
                     <Route path="/iot" element={<><Navbar/><IoT/> </> }/>
                     <Route path="/meter" element={<><Navbar/><Meter/></>  } />
-                    <Route path= "/admin" element={<><Navbar/><Admin/> </>} />
+                    <Route path= "/admin" element={<><SideBar/><Admin/> </>} />
                     <Route path="/billing-info" element={<><Navbar/><BillingInfo/></>} /> 
                     <Route path="/bill-payment" element={<><Navbar/><BillPayment/></>} />
-                    <Route path="/addclients" element={<><Navbar/><AdminHome/> </>}/>
-                    <Route path="/adminmetrics" element={<><Navbar/><Adminmetrics/></>}/>
-                    
-                 <Route path="/adminhome" element={<><Navbar/><Adminmetrics/></>}/>
+                    <Route path="/addclients" element={<><SideBar/><UserTable/> </>}/>
+                    <Route path="/adminmetrics" element={<><SideBar/><Adminmetrics/></>}/>                    
+                    <Route path="/adminhome" element={<><SideBar/><AdminHome/></>}/>
 
                 </Routes>
                 {/* <Routes> */}

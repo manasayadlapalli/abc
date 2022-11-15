@@ -4,15 +4,14 @@ import {AiFillHome} from 'react-icons/ai'
 import {GrUserSettings} from 'react-icons/gr'
 import {GoGraph} from 'react-icons/go'
 import {FaSignOutAlt} from 'react-icons/fa'
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
-import Adminmetrics from './Adminmetrics'
-import AdminHome from './AdminHome'
-import UserTable from './UserTable'
+import { Link } from "react-router-dom";
 
-const SideBar = () => {
+
+export const SideBar = () => {
   return (
     <>
-      <div>
+    <div className='sidebar'>
+      <div >
         <Link to="/adminhome"> <AiFillHome style={{ fontSize: '32px' }}/> </Link>
       </div> <br/>
       <div>
@@ -24,6 +23,7 @@ const SideBar = () => {
       <div> <br/>
         <Link to= "/"> <FaSignOutAlt style={{ fontSize: '31px' }}/> </Link>
       </div>
+      </div>
     </>
   );
 };
@@ -32,18 +32,7 @@ const SideBar = () => {
 export const Admin = () => {
   return (
       <div style={{display: 'flex'}}>
-        <div className='sidebar'>
-          <SideBar />
-        </div>
-        <div className='adminbody'>        
-          {/* <Routes>
-            <Route path="/addclients"> Admin adds clients here </Route>
-            <Route path="/adminmetrics"> <Adminmetrics/></Route>
-            <Route path="/adminhome">
-              <AdminHome/>
-            </Route>
-          </Routes> */}
-          </div>
+        
       </div>
   );
 }
