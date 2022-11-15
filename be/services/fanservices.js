@@ -249,6 +249,84 @@ class FanServices {
                             console.log("Some unexpected error occured while logging in")
                     }
             }
+
+
+
+
+            static updateFanCloudStatus = async (data,reqbody) => {
+                //  console.log(data)
+                      try {
+                  
+                              var query = { id : data.id };
+                              var newvalues = {cloudStatus: reqbody.cloudStatus};
+  
+                              let updatedFan = await Fan.findOneAndUpdate(query, newvalues); 
+                              console.log(updatedFan);        
+                              console.log("ashly");         
+   
+                                  if(updatedFan)
+                                  {
+                                      console.log(updatedFan);
+                                      return updatedFan;
+                                  }
+                                  else{
+                                       //   console.log(updatedFan);
+                                  }                        
+                              }
+                      catch(err){
+                            //  console.log(err);
+                            //  console.log("Some unexpected error occured while logging in")
+                      }
+              }
+              static updateWorkingStatus = async (data,reqbody) => {
+                //  console.log(data)
+                      try {
+                  
+                              var query = { id : data.id };
+                              var newvalues = {workingStatus: reqbody.workingStatus};
+  
+                              let updatedFan = await Fan.findOneAndUpdate(query, newvalues); 
+                              console.log(updatedFan);        
+   
+                                  if(updatedFan)
+                                  {
+                                      console.log(updatedFan);
+                                      return updatedFan;
+                                  }
+                                  else{
+                                       //   console.log(updatedFan);
+                                  }                        
+                              }
+                      catch(err){
+                            //  console.log(err);
+                            //  console.log("Some unexpected error occured while logging in")
+                      }
+              }
+              
+              static updateActiveStatus = async (data,reqbody) => {
+                //  console.log(data)
+                      try {
+                  
+                              var query = { id : data.id };
+                              var newvalues = {activeStatus: reqbody.activeStatus};
+  
+                              let updatedFan = await Fan.findOneAndUpdate(query, newvalues); 
+                              console.log(updatedFan);           
+                                  if(updatedFan)
+                                  {
+                                      console.log(updatedFan);
+                                      return updatedFan;
+                                  }
+                                  else{
+                                       //   console.log(updatedFan);
+                                  }                        
+                              }
+                      catch(err){
+                            //  console.log(err);
+                            //  console.log("Some unexpected error occured while logging in")
+                      }
+              }
 }
+
 
 module.exports.FanServices = FanServices;
