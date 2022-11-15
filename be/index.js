@@ -6,6 +6,8 @@ const mongoose = require('mongoose');
 // controllers
 const authenticatectrl = require('./controllers/authctrl');
 const fanctrl = require('./controllers/fanctrl');
+const lightctrl = require('./controllers/lightctrl');
+const simulatedctrl= require('./controllers/simulatedctrl');
 
 //const testredis = require("./controllers/redis")
 
@@ -42,6 +44,9 @@ app.use('/uploads', express.static('uploads'));
 
 app.use('/api/auth', authenticatectrl);
 app.use('/api/fan', fanctrl);
+app.use('/api/simulated', simulatedctrl);
+app.use('/api/light', lightctrl);
+
 
 
 // server listening

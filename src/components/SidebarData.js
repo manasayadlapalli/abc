@@ -18,7 +18,7 @@ export const SidebarData = [
     },
     {
       title: "Monitor and Tracking",
-      path: "/monitor-tracking",
+      path: "/monitor-tracking-options",
       icon: <FaIcons.FaCartPlus />,
       cName: "nav-text"
     },

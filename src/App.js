@@ -19,7 +19,7 @@ import { AdminHome } from './components/Admin/AdminHome';
 import { Adminmetrics } from './components/Admin/Adminmetrics.js';
 import {SideBar} from './components/Admin/Admin.js'
 import UserTable from './components/Admin/UserTable';
-
+import { MonitorTrackingOptions} from './components/pages/MonitorTrackingOptions'
 
 function App() {
   
@@ -35,7 +35,7 @@ function App() {
                     <Route path="/home" element={<><Navbar/><HomePage/></>}/>
                     <Route path="/device-mgmt" element={<><Navbar/><DeviceManagement/> </> } />
                     <Route path="/control-config" element={<><Navbar/><ControlConfiguration/> </> } />
-                    <Route path="/monitor-tracking" element={<><Navbar/><MonitorTracking/> </> } />
+                    <Route path="/monitor-tracking-options" element={<><Navbar/><MonitorTrackingOptions/> </> } />
                     <Route path="/iot" element={<><Navbar/><IoT/> </> }/>
                     <Route path="/meter" element={<><Navbar/><Meter/></>  } />
                     <Route path= "/admin" element={<><SideBar/><Admin/> </>} />
