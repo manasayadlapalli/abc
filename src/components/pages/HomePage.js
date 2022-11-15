@@ -83,7 +83,7 @@ export default function HomePage() {
                <div>
                 <Chart
                     chartType="Line"
-                    width="90%"
+                    width="80%"
                     height="300px"
                     data={data}
                     options={options}
