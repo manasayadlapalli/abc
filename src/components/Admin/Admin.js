@@ -35,11 +35,11 @@ export const Admin = () => {
           <SideBar />
         </div>
         <div className='adminbody'>        
-          <Router>
+          {/* <Router>
             <Route path="/addclients"> Admin adds clients here </Route>
             <Route path="/adminmetrics-payment" element={<Adminmetrics/>} />
             <Route path="/adminhome" element ={<AdminHome/>}/>
-          </Router>
+          </Router> */}
           </div>
       </div>
   );
